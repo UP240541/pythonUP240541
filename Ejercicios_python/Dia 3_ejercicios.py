@@ -54,57 +54,21 @@ print ("El area del circulo es de: ", area3, " Y la circumferencia es de: ", cir
 
 #8.-Calculate the slope, x-intercept and y-intercept of y = 2x -2
 print("Ejercicio 8")
-def line_properties(equation):
-    # Parse the equation of the form y = mx + b
-    equation = equation.replace("y =", "").strip()
-    m, b = equation.split("x")
-    m = float(m.strip())
-    b = float(b.strip())
-
-    # Calculate slope, x-intercept, and y-intercept
-    slope = m
-    x_intercept = -b / m
-    y_intercept = b
-
-    return slope, x_intercept, y_intercept
-
-
-equation = "y = 2x -2"
-slope, x_intercept, y_intercept = line_properties(equation)
-
-print(f"Equation: {equation}")
-print(f"Slope: {slope}")
-print(f"X-intercept: {x_intercept}")
-print(f"Y-intercept: {y_intercept}")
+#trabajando en ello
 
 #9.- Slope is (m = y2-y1/x2-x1). Find the slope and Euclidean distance between point (2, 2) and point (6,10)
 print("Ejercicio 9")
-def calculate_slope_and_distance(x1, y1, x2, y2):
-    # Calculate slope
-    slope2 = (y2 - y1) / (x2 - x1)
-    import math
-    # Calculate Euclidean distance
-    distance = math.sqrt((x2 - x1)**2 + (y2 - y1)**2)
-    return slope2, distance
-# Points
-x1, y1 = 2, 2
-x2, y2 = 6, 10
-# Compute results
-slope2, distance = calculate_slope_and_distance(x1, y1, x2, y2)
-# Output results
-print(f"Points: ({x1}, {y1}), ({x2}, {y2})")
-print(f"Slope: {slope2}")
-print(f"Euclidean Distance: {distance}")
+#trabajando en ello 
 
 #10 Compare the slopes in tasks 8 and 9.
-print("Ejercicio 10")
-print("Comparar las pendientes de la 8 y 9")
-print(slope > slope2)
-print(slope < slope2)
-print(slope == slope2)
-print(slope >= slope2)
-print(slope <= slope2)
-print(slope != slope2)
+#print("Ejercicio 10")
+#print("Comparar las pendientes de la 8 y 9")
+#print(slope > slope2)
+#print(slope < slope2)
+#print(slope == slope2)
+#print(slope >= slope2)
+#print(slope <= slope2)
+#print(slope != slope2)
 
 #11 Calculate the value of y (y = x^2 + 6x + 9). Try to use different x values and figure out at what x value y is going to be 0.
 print("Ejercicio 11")
@@ -189,8 +153,8 @@ print("Su salario semanal es de: ", salario)
 #  a person can live. Assume a person can live hundred years
 print("Ejercicio 22")
 anos = int(input("Ingrese una cantidad de años: "))
-if anos > 100:
-    print("La cantidad excede el numero de años")
+if anos > 100 and anos < 0:
+    print("Valor invalido")
 else:
     seg = anos * 31536
     print("Una persona de ", anos ," años vivio: ", seg ) 
