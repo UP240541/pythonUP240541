@@ -63,17 +63,23 @@ print ("Interseccion con el eje y (b): (0, {b})")
 print ("Interseccion con el eje x: (s{slope}, 0)")
 #9.- Slope is (m = y2-y1/x2-x1). Find the slope and Euclidean distance between point (2, 2) and point (6,10)
 print("Ejercicio 9")
-#trabajando en ello 
+import math
+x1, y1 = 2, 2
+x2, y2 = 6, 10
+slope2 = (y2 - y1) / (x2 - x1)
+distance = math.sqrt((x2 - x1)**2 + (y2 - y1)**2)
+print("Pendiente: {slope}")
+print("Distancia euclidiana: {distance}")
 
 #10 Compare the slopes in tasks 8 and 9.
-#print("Ejercicio 10")
-#print("Comparar las pendientes de la 8 y 9")
-#print(slope > slope2)
-#print(slope < slope2)
-#print(slope == slope2)
-#print(slope >= slope2)
-#print(slope <= slope2)
-#print(slope != slope2)
+print("Ejercicio 10")
+print("Comparar las pendientes de la 8 y 9")
+print(slope > slope2)
+print(slope < slope2)
+print(slope == slope2)
+print(slope >= slope2)
+print(slope <= slope2)
+print(slope != slope2)
 
 #11 Calculate the value of y (y = x^2 + 6x + 9). Try to use different x values and figure out at what x value y is going to be 0.
 print("Ejercicio 11")
