@@ -55,7 +55,12 @@ print ("El area del circulo es de: ", area3, " Y la circumferencia es de: ", cir
 #8.-Calculate the slope, x-intercept and y-intercept of y = 2x -2
 print("Ejercicio 8")
 #trabajando en ello
-
+m = 2
+b = -2
+slope = -b / m
+print ("Pendiente (m): {m}")
+print ("Interseccion con el eje y (b): (0, {b})")
+print ("Interseccion con el eje x: (s{slope}, 0)")
 #9.- Slope is (m = y2-y1/x2-x1). Find the slope and Euclidean distance between point (2, 2) and point (6,10)
 print("Ejercicio 9")
 #trabajando en ello 
@@ -156,7 +161,7 @@ anos = int(input("Ingrese una cantidad de años: "))
 if anos > 100 and anos < 0:
     print("Valor invalido")
 else:
-    seg = anos * 31536
+    seg = anos * 31536000
     print("Una persona de ", anos ," años vivio: ", seg ) 
 #23 Write a Python script that displays the following table
 print("1 1 1 1 1")
