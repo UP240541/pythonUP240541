@@ -20,11 +20,19 @@ for i in range(len(fruit) - 1, -1, -1):
 print(reversa)
 
 #3.- Go to the data folder and use the countries_data.py file.
-import countries-data as datos
-
+import paises as p
+datos = p.aaa
 
 #What are the total number of languages in the data
+idiomas = []
+for pais in datos:
+    #print(pais["languages"])
+    idiomas.append(pais["languages"])
+print(idiomas)
+
+
 
 #Find the ten most spoken languages from the data
+
 
 #ind the 10 most populated countries in the world

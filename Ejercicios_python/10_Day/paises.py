@@ -1,4 +1,4 @@
-[
+aaa= [
     {
         "name": "Afghanistan",
         "capital": "Kabul",
