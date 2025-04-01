@@ -58,9 +58,9 @@ print("Ejercicio 8")
 m = 2
 b = -2
 slope = -b / m
-print ("Pendiente (m): {m}")
-print ("Interseccion con el eje y (b): (0, {b})")
-print ("Interseccion con el eje x: (s{slope}, 0)")
+print (f"Pendiente (m): {m}")
+print (f"Interseccion con el eje y (b): (0, {b})")
+print (f"Interseccion con el eje x: (s{slope}, 0)")
 #9.- Slope is (m = y2-y1/x2-x1). Find the slope and Euclidean distance between point (2, 2) and point (6,10)
 print("Ejercicio 9")
 import math
@@ -68,8 +68,8 @@ x1, y1 = 2, 2
 x2, y2 = 6, 10
 slope2 = (y2 - y1) / (x2 - x1)
 distance = math.sqrt((x2 - x1)**2 + (y2 - y1)**2)
-print("Pendiente: {slope}")
-print("Distancia euclidiana: {distance}")
+print(f"Pendiente: {slope}")
+print(f"Distancia euclidiana: {distance}")
 
 #10 Compare the slopes in tasks 8 and 9.
 print("Ejercicio 10")
