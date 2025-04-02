@@ -54,20 +54,32 @@ datos = p.aaa
 #6.- Create a function called the most_spoken_languages in the world. It should return 10 or 20 most spoken languages in the world in descending order
 idiomas = []
 print("Ejercicio 6")
-setidiomas = set(idiomas)
-dctidiomas = {}
 
-def most_spoken_languages(n=10):
-    for language in setidiomas:
-        dctidiomas[language] = 0
-    for idioma in dctidiomas:
-        for pais in datos:  
-         if idioma in pais['languages']:
-             dctidiomas[idioma] = pais['population'] + dctidiomas[idioma]
-    svLanguagePop = sorted(dctidiomas.values(), reverse= True)
-    skLanguagePop = sorted(dctidiomas, key= dctidiomas.get, reverse=True)
-    
-    return svLanguagePop, svLanguagePop
+def most_spoken_languages():
+    for pais in datos:
+        for language in pais['languages']:
+            idiomas.append(language)
+    setLen = set(idiomas)
+    dctLen = { }
+    for language in setLen:
+        dctLen[language] = 0
+    for idioma in dctLen:
+        for pais in datos:
+            if idioma in pais ['languages']:
+                dctLen[idioma] = pais['population'] + dctLen[idioma]
+    sorValLenPop = sorted(dctLen.values(), reverse= True)                          
+    sortKeyLenPop = sorted(dctLen,key=dctLen.get,reverse=True)
+    return sortKeyLenPop[:10],sorValLenPop[:10]
+print(most_spoken_languages())
 
 #7.- Create a function called the most_populated_countries. It should return 10 or 20 most populated countries in descending order.
 print("Ejercicio 7")
+def most_populated_countries ():
+    dctPop = {
+    }
+    for pais in datos:
+        dctPop[pais['name']] = pais['population']
+    sortValPop = sorted(dctPop.values(),reverse=True)
+    sortKeyPop = sorted(dctPop,key=dctPop.get,reverse=True)
+    return sortKeyPop[:10], sortValPop[:10]
+print(most_populated_countries())
