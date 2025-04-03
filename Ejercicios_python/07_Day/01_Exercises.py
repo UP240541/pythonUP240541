@@ -28,3 +28,4 @@ print("Podemos remover items no especificados con discard(), en cambio remove() 
 it_companies.pop()
 print(it_companies)
 
+print("revisado")

@@ -46,3 +46,5 @@ print("Estonia" in scandic)
 
 #15 Check if 'Iceland' is a nordic country
 print("Iceland" in scandic)
+
+print("revisado") #No se ejecuta

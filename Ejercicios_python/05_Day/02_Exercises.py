@@ -74,3 +74,5 @@ print(ch)
 print(ru)
 print(us)
 print(scandic)
+
+print("revisado")

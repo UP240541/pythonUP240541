@@ -58,3 +58,5 @@ print("Ejercicio 16")
 sent = ("I am a teacher and I love to inspire and teach people.")
 dividido = sent.split()
 print(len(dividido))
+
+print("revisado") #No se ejecuta 

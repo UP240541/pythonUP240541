@@ -135,3 +135,4 @@ full_stack.insert(8, 'Python')
 full_stack.insert(9, 'SQL')
 print(full_stack) 
 
+print("revisado")
