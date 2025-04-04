@@ -1,61 +1,51 @@
 #1.- Use the countries_data.py (https://github.com/Asabeneh/30-Days-Of-Python/blob/master/data/countries-data.py) file and follow the tasks below:
 #Sort countries by name, by capital, by population
-import paises as datos
-def nombre(pais):
-    return pais["name"]
-def capital(pais):
-    return pais["capital"]
-def populus(pais):
-    return pais["population"]
-def sortNombre(paises):
-    return sorted(paises, key=nombre)
-def sortCapital(paises):
-    return sorted(paises, key=capital)
-def sortPoupulus(paises, reverse=False):
-    return sorted(paises, key=populus, reverse=reverse)
-lstpaises = datos
+from paises import aaa
+print("Ejercicio 1.1")
+def sort_by_name(countries):
+    return sorted(countries, key=lambda x: x["name"])
 
-sortedNombre = sortNombre(lstpaises)
-print("\n Ordenado por nombre:")
-for pais in sortedNombre:
-    print(pais["name"])
-sortedCapital = sortCapital(lstpaises)
-print("\n Ordenado por capital:")
-for pais in sortedCapital:
-    print(pais["capital"])
-sortedPoupulus = sortPoupulus(lstpaises, reverse=True)
-print("\n Ordenado por población (de mayor a menor):")
-for pais in sortedPoupulus:
-    print(f"{pais['name']} - {pais['population']}")
+def sort_by_capital(countries):
+    return sorted(countries, key=lambda x: x["capital"])
+
+def sort_by_population(countries, descending=False):
+    return sorted(countries, key=lambda x: x["population"], reverse=descending)
+
+if __name__ == "__main__":
+    by_name = sort_by_name(aaa)
+    by_capital = sort_by_capital(aaa)
+    by_population = sort_by_population(aaa, descending=True)
+
+    print("-------------------Acomodados por Nombre------------------- ")
+    for country in by_name[:50]:
+        print(country["name"], "-", country["capital"])
+
+    print("\n-------------------Acomodados por capital-------------------")
+    for country in by_capital[:50]:
+        print(country["capital"], "-", country["name"])
+
+    print("\n-------------------Poblacion-------------------")
+    for country in by_population[:50]:
+        print(f'{country["name"]}: {country["population"]:,}')
 
 #Sort out the ten most spoken languages by location.
-#Sort out the ten most populated countries.
-
-
-
-#2
+print("Ejercicio 1.2")
 from collections import Counter
+language_counter = Counter()
+for country in aaa:
+    languages = set(country.get("languages", [])) 
+    for lang in languages:
+        language_counter[lang] += 1
+top_10_languages = language_counter.most_common(10)
 
-def contarTop10Idiomas():
-    idiomas = []
-    for pais in paises.paises:  
-        if "languages" in pais:  
-            idiomas.extend(pais["languages"]) 
-    top10Idiomas = Counter(idiomas).most_common(10)
-    return top10Idiomas
-def mostrarTop10Idiomas():
-    top10Idiomas = contarTop10Idiomas()
-    print("Los 10 idiomas más hablados globalmente son:")
-    for idioma, count in top10Idiomas:
-        print(f"{idioma}: {count}")
-mostrarTop10Idiomas()
-#3
-def clasificarPaisesMasPoblados():
-    paisesOrdenados = sorted(paises.paises, key=lambda pais: pais["population"], reverse=True)
-    return paisesOrdenados[:10]
-def mostrarTop10PaisesMasPoblados():
-    top10Paises = clasificarPaisesMasPoblados()
-    print("Los 10 países más poblados son:")
-    for pais in top10Paises:
-        print(f"{pais['name']}: {pais['population']}")
-mostrarTop10PaisesMasPoblados()
+print("\nTop 10 lenguages más hablados por ubicacion:")
+for i, (language, count) in enumerate(top_10_languages, start=1):
+    print(f"{i}. {language}: {count} countries")
+#Sort out the ten most populated countries.
+print("Ejercicio 1.3")
+print("\nTop 10 paises más poblados segun el countries-data.py")
+for country in by_population[:10]:
+        print(f'{country["name"]}: {country["population"]:,}')
+
+
+
