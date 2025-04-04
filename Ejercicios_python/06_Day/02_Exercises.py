@@ -1,5 +1,7 @@
 # Exercises: Level 2
-
+sibTuple = ("Yuleinis", "Yonaiker", "Davielis", "Leidi")
+family_members = ("Ovimarlixion", "Yusleidi")
+family_members = family_members + sibTuple
 #6 Unpack siblings and parents from family_members
 papa,mama, *sib = family_members
 print(papa)
@@ -47,4 +49,4 @@ print("Estonia" in scandic)
 #15 Check if 'Iceland' is a nordic country
 print("Iceland" in scandic)
 
-print("revisado") #No se ejecuta
+print("revisado") #No se ejecuta /// Arreglado 
