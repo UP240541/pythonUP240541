@@ -24,3 +24,5 @@ for num3 in range(0, 101):
         suma2 = suma2 + num3  
 print("La suma de los valores par es: ", suma1, " Y la suma de los valos impar es: ", suma2)
 #The sum of all evens is 2550. And the sum of all odds is 2500.
+
+print("revisado")

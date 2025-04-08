@@ -30,3 +30,5 @@ print(generate_colors('hexa', 3)) # ['#a3e12f','#03ed55','#eb3d2b']
 print(generate_colors('hexa', 1)) # ['#b334ef']
 print(generate_colors('rgb', 3))  # ['rgb(5, 55, 175','rgb(50, 105, 100','rgb(15, 26, 80'] 
 print(generate_colors('rgb', 1))  # ['rgb(33,79, 176)']
+
+print("revisado")

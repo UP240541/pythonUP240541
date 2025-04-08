@@ -34,3 +34,4 @@ del A
 del B
 
 print(A,B)
+print("revisado")

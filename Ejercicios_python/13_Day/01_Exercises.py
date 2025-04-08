@@ -63,3 +63,5 @@ print("Ejercicio 7")
 slope = lambda x1, y1, x2, y2: (y2 - y1) / (x2 - x1) if x1 != x2 else None
 
 print(slope(1, 2, 3, 6))
+
+print("revisado")

@@ -28,4 +28,4 @@ print(len(sent))
 dividido = sent.split()
 print(len(dividido))
 
-print("revisado") #No se ejecuta // Arreglado
+print("revisado") 
